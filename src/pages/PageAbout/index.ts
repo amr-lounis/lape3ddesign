@@ -1,2 +1,2 @@
-import PageAbout from "./PageAbout";
-export { PageAbout };
+import Page from "./PageAbout";
+export { Page as PageAbout };

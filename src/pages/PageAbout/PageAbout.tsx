@@ -1,9 +1,8 @@
 import { Container, Grid, Button } from "@mui/material";
 import img from "./image_about.png";
+import data from "./data_about.json";
 
 export default function PageServices() {
-  const AboutText =
-    " Explore our portfolio, discover our creative process, and learn how we can bring your ideas to life. Your journey to immersive,captivating 3D design experiences starts here, with L’APE 3D DESIGN AGENCY.";
   return (
     <div>
       <Container
@@ -25,7 +24,16 @@ export default function PageServices() {
         >
           <Grid item md={8}>
             <h1 style={{ color: "#fff" }}>Your Premier 3D Design Partner</h1>
-            <h2 style={{ color: "#fff", textAlign: "start" }}>{AboutText}</h2>
+
+            <h2 style={{ color: "#fff", textAlign: "start" }}>
+              {data.AboutText[0]}
+            </h2>
+            <h2 style={{ color: "#fff", textAlign: "start" }}>
+              {data.AboutText[1]}
+            </h2>
+            <h2 style={{ color: "#fff", textAlign: "start" }}>
+              {data.AboutText[2]}
+            </h2>
             <Container
               sx={{
                 display: "flex",
