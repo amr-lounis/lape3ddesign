@@ -15,7 +15,14 @@ export default function PageServices() {
           marginTop: 20,
         }}
       >
-        <Grid container>
+        <Grid
+          container
+          sx={{
+            display: "flex",
+            justifyItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Grid item md={8}>
             <h1 style={{ color: "#fff" }}>Your Premier 3D Design Partner</h1>
             <h2 style={{ color: "#fff", textAlign: "start" }}>{AboutText}</h2>
@@ -31,7 +38,7 @@ export default function PageServices() {
               <Button variant="contained">BECOME A DESIGNER</Button>
             </Container>
           </Grid>
-          <Grid item md={4}>
+          <Grid item xs={4}>
             <img src={img} style={{ width: "100%" }} alt=""></img>
           </Grid>
         </Grid>

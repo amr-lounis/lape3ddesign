@@ -6,6 +6,6 @@
     "allowJs": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "types"],
   "exclude": ["node_modules"]
 }

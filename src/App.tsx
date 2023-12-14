@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 //
-import { app_routes, nav_urls, public_images, auth_urls } from "src/data-urls";
+import { urls } from "src/App-urls";
 //
 import { MyNavBar } from "src/utils/components/MyNavBar";
 import { store } from "src/utils/store";
@@ -16,13 +16,9 @@ const App = () => {
       <MyParticles index={0}></MyParticles>
       <Provider store={store}>
         <BrowserRouter>
-          <MyNavBar
-            nav_urls={nav_urls}
-            auth_urls={auth_urls}
-            logo={public_images.logo}
-          />
+          <MyNavBar urls={urls} />
           <Routes>
-            {app_routes.map((r) => {
+            {urls.app_routes.map((r) => {
               return (
                 <Route key={r.to} path={r.to} element={<r.element />}></Route>
               );

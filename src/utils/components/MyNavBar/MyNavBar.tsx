@@ -27,7 +27,7 @@ const rightLink = {
   ml: 3,
 };
 
-function ResponsiveAppBar({ nav_urls, auth_urls, logo }) {
+function ResponsiveAppBar({ urls }) {
   return (
     <AppBar
       position="static"
@@ -56,11 +56,11 @@ function ResponsiveAppBar({ nav_urls, auth_urls, logo }) {
                 sx={{ flexGrow: 1 }}
               >
                 <NavLink to="/" className="nav-link">
-                  <img src={logo} height={50} alt="logo"></img>
+                  <img src={urls.images.logo} height={50} alt="logo"></img>
                 </NavLink>
               </Typography>
               <nav>
-                {nav_urls.map((r) => {
+                {urls.nav_urls.map((r) => {
                   return (
                     <MyNavLink
                       key={r.name}
