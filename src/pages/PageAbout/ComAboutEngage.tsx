@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import data from "./data_about.json";
 
-export default function ComAbout3() {
+export default function ComAboutEngage() {
   return (
     <>
       <Container

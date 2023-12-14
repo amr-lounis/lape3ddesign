@@ -1,7 +1,8 @@
 import { Container, Button } from "@mui/material";
-import ComAbout1 from "./ComAbout1";
-import ComAbout2 from "./ComAbout2";
-import ComAbout3 from "./ComAbout3";
+import ComAboutPremier from "./ComAboutPremier";
+import ComAboutServices from "./ComAboutServices";
+import ComAboutEngage from "./ComAboutEngage";
+import ComAboutMarket from "./ComAboutMarket";
 
 export default function PageServices() {
   return (
@@ -15,9 +16,10 @@ export default function PageServices() {
           marginBottom: 20,
         }}
       >
-        <ComAbout1></ComAbout1>
-        <ComAbout2></ComAbout2>
-        <ComAbout3></ComAbout3>
+        <ComAboutPremier></ComAboutPremier>
+        <ComAboutServices></ComAboutServices>
+        <ComAboutMarket></ComAboutMarket>
+        <ComAboutEngage></ComAboutEngage>
         <Container
           sx={{
             display: "flex",

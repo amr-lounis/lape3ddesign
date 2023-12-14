@@ -2,7 +2,7 @@ import { Container, Grid } from "@mui/material";
 import img from "./image_about.png";
 import data from "./data_about.json";
 
-export default function ComAbout1() {
+export default function ComAboutServices() {
   return (
     <>
       <Grid
@@ -16,8 +16,8 @@ export default function ComAbout1() {
       >
         <Grid item md={8}>
           <Container>
-            <h1 style={{ color: "#fff" }}>Your Premier 3D Design Partner</h1>
-            {data.AboutText.map((t, i) => {
+            <h1 style={{ color: "#fff" }}>SERVICES</h1>
+            {data.Services.map((t, i) => {
               return (
                 <h2 key={`${i}`} style={{ color: "#fff", textAlign: "start" }}>
                   {t}
@@ -26,16 +26,7 @@ export default function ComAbout1() {
             })}
           </Container>
         </Grid>
-        <Grid
-          item
-          xs={4}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <Grid item xs={4}>
           <img src={img} style={{ width: "100%" }} alt=""></img>
         </Grid>
       </Grid>
