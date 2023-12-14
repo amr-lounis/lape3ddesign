@@ -9,7 +9,6 @@ import { MyParticles } from "./utils/components/MyParticles";
 //
 import { MyFooter } from "./utils/components/MyFooter";
 import "./app.css";
-//
 const App = () => {
   return (
     <>
