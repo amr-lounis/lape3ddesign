@@ -4,7 +4,13 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 import style from "./MyParticles.module.css";
-export default function MyParticles({ url }) {
+
+import p1 from "./particles1.json";
+import p2 from "./particles2.json";
+
+const particles = [p1, p2];
+
+export default function MyParticles({ index }) {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -15,5 +21,11 @@ export default function MyParticles({ url }) {
     });
   }, []);
 
-  return <>{init && <Particles className={style.tsParticles} url={url} />}</>;
+  return (
+    <>
+      {init && (
+        <Particles className={style.tsParticles} options={particles[index]} />
+      )}
+    </>
+  );
 }

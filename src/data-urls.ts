@@ -34,8 +34,3 @@ export const app_routes = [
 export const public_images = {
   logo: "/images/logo@2x.png",
 };
-
-export const public_particles = {
-  particles: "/particles/particles.json",
-  particles2: "/particles/particles2.json",
-};
