@@ -3,7 +3,6 @@ import {
   Typography,
   Box,
   Grid,
-  Link,
   Checkbox,
   FormControlLabel,
   TextField,
@@ -11,7 +10,7 @@ import {
   Avatar,
 } from "@mui/material";
 
-import { Link as LinkRoute } from "react-router-dom";
+import { MyNavLink } from "src/utils/components/ComLinkes";
 
 export default function MySignUpCard() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -107,9 +106,7 @@ export default function MySignUpCard() {
         </Button>
         <Grid container justifyContent="flex-end">
           <Grid item>
-            <LinkRoute to="/sign_in">
-              <Link variant="body2">{"Don't have an account? Sign Up"}</Link>
-            </LinkRoute>
+            <MyNavLink to="/sign_in">Don't have an account? Sign Up</MyNavLink>
           </Grid>
         </Grid>
       </Box>

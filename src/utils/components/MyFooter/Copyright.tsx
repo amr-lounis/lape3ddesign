@@ -1,17 +1,12 @@
 import { Link, Typography } from "@mui/material";
 
-export default function Copyright(props: any) {
+export default function Copyright({ urls }) {
   return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
+    <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
+      <Link color="inherit" href={`https://${urls.thisWebSite}.com`}>
+        {urls.thisWebSite + " "}
+      </Link>
       {new Date().getFullYear()}
       {"."}
     </Typography>

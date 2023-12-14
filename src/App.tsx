@@ -24,7 +24,7 @@ const App = () => {
               );
             })}
           </Routes>
-          <MyFooter></MyFooter>
+          <MyFooter urls={urls}></MyFooter>
         </BrowserRouter>
       </Provider>
     </>

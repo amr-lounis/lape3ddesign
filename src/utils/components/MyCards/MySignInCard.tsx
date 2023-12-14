@@ -3,14 +3,14 @@ import {
   Typography,
   Box,
   Grid,
-  Link,
   Checkbox,
   FormControlLabel,
   TextField,
   Button,
   Avatar,
 } from "@mui/material";
-import { Link as LinkRoute } from "react-router-dom";
+//
+import { MyNavLink } from "src/utils/components/ComLinkes";
 
 export default function MySignInCard() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -66,14 +66,12 @@ export default function MySignInCard() {
         </Button>
         <Grid container>
           <Grid item xs>
-            <Link href="#" variant="body2">
-              Forgot password?
-            </Link>
+            <MyNavLink to="/forgot">"Forgot password?"</MyNavLink>
           </Grid>
           <Grid item>
-            <LinkRoute to="/sign_up">
-              <Link variant="body2">{"Don't have an account? Sign Up"}</Link>
-            </LinkRoute>
+            <MyNavLink to="/sign_up">
+              "Don't have an account? Sign Up"
+            </MyNavLink>
           </Grid>
         </Grid>
       </Box>

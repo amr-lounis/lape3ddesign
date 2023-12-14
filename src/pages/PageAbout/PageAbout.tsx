@@ -1,55 +1,34 @@
-import { Container, Grid, Button } from "@mui/material";
-import img from "./image_about.png";
-import data from "./data_about.json";
+import { Container, Button } from "@mui/material";
+import ComAbout1 from "./ComAbout1";
+import ComAbout2 from "./ComAbout2";
+import ComAbout3 from "./ComAbout3";
 
 export default function PageServices() {
   return (
     <div>
       <Container
         sx={{
-          height: "100vh",
           display: "flex",
           flexDirection: "column",
           textAlign: "center",
           marginTop: 20,
+          marginBottom: 20,
         }}
       >
-        <Grid
-          container
+        <ComAbout1></ComAbout1>
+        <ComAbout2></ComAbout2>
+        <ComAbout3></ComAbout3>
+        <Container
           sx={{
             display: "flex",
-            justifyItems: "center",
-            justifyContent: "center",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            p: 10,
           }}
         >
-          <Grid item md={8}>
-            <h1 style={{ color: "#fff" }}>Your Premier 3D Design Partner</h1>
-
-            <h2 style={{ color: "#fff", textAlign: "start" }}>
-              {data.AboutText[0]}
-            </h2>
-            <h2 style={{ color: "#fff", textAlign: "start" }}>
-              {data.AboutText[1]}
-            </h2>
-            <h2 style={{ color: "#fff", textAlign: "start" }}>
-              {data.AboutText[2]}
-            </h2>
-            <Container
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                p: 10,
-              }}
-            >
-              <Button variant="contained">GET IN TOUCH</Button>
-              <Button variant="contained">BECOME A DESIGNER</Button>
-            </Container>
-          </Grid>
-          <Grid item xs={4}>
-            <img src={img} style={{ width: "100%" }} alt=""></img>
-          </Grid>
-        </Grid>
+          <Button variant="contained">GET IN TOUCH</Button>
+          <Button variant="contained">BECOME A DESIGNER</Button>
+        </Container>
       </Container>
     </div>
   );
