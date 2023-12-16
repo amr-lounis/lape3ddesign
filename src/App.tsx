@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 //
-import { urls } from "src/App-urls";
+import { urls } from "src/data/App-urls";
 //
 import { MyNavBar } from "src/utils/components/MyNavBar";
 import { store } from "src/utils/store";

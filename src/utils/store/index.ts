@@ -5,7 +5,7 @@ import { useSelector, useDispatch, TypedUseSelectorHook } from "react-redux";
 import { counter1Slice } from "./slices/counter1Slice";
 import { counter2Slice } from "./slices/counter2Slice";
 import { userSlice } from "./slices/userSlice";
-
+//
 export const store = configureStore({
   reducer: {
     counter1: counter1Slice.reducer,

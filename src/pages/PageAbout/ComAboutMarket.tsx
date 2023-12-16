@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import img from "./image_about.png";
-import data from "./data_about.json";
+import data from "src/data/data_about.json";
 //
 export default function ComAboutMarket() {
   return (
@@ -19,7 +19,7 @@ export default function ComAboutMarket() {
             <h1 style={{ color: "#fff" }}>Market</h1>
             {data.Market.map((t, i) => {
               return (
-                <h2 key={`${i}`} style={{ color: "#fff", textAlign: "start" }}>
+                <h2 key={i} style={{ color: "#fff", textAlign: "start" }}>
                   {t}
                 </h2>
               );

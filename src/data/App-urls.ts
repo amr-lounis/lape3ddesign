@@ -1,11 +1,10 @@
 import { PageHome } from "src/pages/PageHome";
 import { PageNotFond } from "src/pages/PageNotFond";
-import { PageSignIn } from "./pages/PageSignIn";
-import { PageSignUp } from "./pages/PageSignUp";
-import { PageContactUs } from "./pages/PageContactUs";
-import { PageServices } from "./pages/PageServices";
-import { PageMarket } from "./pages/PageMarket";
-import { PageAbout } from "./pages/PageAbout";
+import { PageSignIn, PageSignUp } from "../pages/PagesAuth";
+import { PageContactUs } from "../pages/PageContactUs";
+import { PageServices } from "../pages/PageServices";
+import { PageMarket } from "../pages/PageMarket";
+import { PageAbout } from "../pages/PageAbout";
 
 export const urls = {
   thisWebSite: "lep",

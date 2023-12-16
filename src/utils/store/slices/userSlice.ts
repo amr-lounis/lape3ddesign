@@ -1,18 +1,18 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+// import axios from "axios";
 
-// function delay(t, val) {
-//   return new Promise((resolve) => setTimeout(resolve, t, val));
-// }
+function delay(t, val) {
+  return new Promise((resolve) => setTimeout(resolve, t, val));
+}
 
 // Generated pending, fulfilled, rejected action types
 export const fetchUsers = createAsyncThunk("user/fetchUsers", () => {
   const users = [];
   for (let i = 1; i <= 10; i++) users.push({ id: i, name: `name ${i}` });
-  // return delay(2000, users).then((e: any[]) => e);
-  return axios
-    .get("https://jsonplaceholder.typicode.com/users")
-    .then((res) => res.data);
+  return delay(2000, users).then((e: any[]) => e);
+  // return axios
+  //   .get("https://jsonplaceholder.typicode.com/users")
+  //   .then((res) => res.data);
 });
 
 export const userSlice = createSlice({
@@ -24,16 +24,19 @@ export const userSlice = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchUsers.pending, (state) => {
+    // pending
+    builder.addCase(fetchUsers.pending, (state, action) => {
       state.loading = true;
       state.data = [];
       state.error = "";
     });
+    // fulfilled
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.loading = false;
       state.data = action.payload;
       state.error = "";
     });
+    // rejected
     builder.addCase(fetchUsers.rejected, (state, action) => {
       state.loading = false;
       state.data = [];

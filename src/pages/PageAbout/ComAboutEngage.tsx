@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
-import data from "./data_about.json";
-
+import data from "src/data/data_about.json";
+//
 export default function ComAboutEngage() {
   return (
     <>
@@ -17,14 +17,12 @@ export default function ComAboutEngage() {
         <Grid container sx={{ justifyContent: "space-between" }}>
           {data.Engage.map((t, i) => {
             return (
-              <>
-                <Grid item sm={12} md={5} lg={3} sx={{ m: 1 }}>
-                  <h1 style={{ color: "#FFF" }}>{i + 1}</h1>
-                  <h2 key={i} style={{ color: "#fff", textAlign: "start" }}>
-                    {t}
-                  </h2>
-                </Grid>
-              </>
+              <Grid key={i} item sm={12} md={5} lg={3} sx={{ m: 1 }}>
+                <h1 style={{ color: "#FFF" }}>{i + 1}</h1>
+                <h2 key={i} style={{ color: "#fff", textAlign: "start" }}>
+                  {t}
+                </h2>
+              </Grid>
             );
           })}
         </Grid>
