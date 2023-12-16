@@ -8,6 +8,7 @@ import { store } from "src/utils/store";
 import { MyParticles } from "./utils/components/MyParticles";
 //
 import { MyFooter } from "./utils/components/MyFooter";
+import logo from "src/utils/images/logo.png";
 import "./app.css";
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
       <MyParticles index={0}></MyParticles>
       <Provider store={store}>
         <BrowserRouter>
-          <MyNavBar urls={urls} />
+          <MyNavBar urls={urls} logo={logo} />
           <Routes>
             {urls.app_routes.map((r) => {
               return (

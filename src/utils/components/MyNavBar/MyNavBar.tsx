@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Container, Typography, Grid } from "@mui/material";
 //
 import { MyNavLink } from "src/utils/components/ComLinkes";
 
-function ResponsiveAppBar({ urls }) {
+function ResponsiveAppBar({ urls, logo }) {
   return (
     <AppBar
       position="static"
@@ -32,7 +32,7 @@ function ResponsiveAppBar({ urls }) {
                 sx={{ flexGrow: 1 }}
               >
                 <NavLink to="/" className="nav-link">
-                  <img src={urls.images.logo} height={50} alt="logo"></img>
+                  <img src={logo} height={50} alt="logo"></img>
                 </NavLink>
               </Typography>
               <nav>
