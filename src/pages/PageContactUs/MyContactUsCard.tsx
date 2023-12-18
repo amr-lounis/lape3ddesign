@@ -1,28 +1,14 @@
-import styled from "@emotion/styled";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import EmailIcon from "@mui/icons-material/Email";
 import {
   Typography,
   Box,
   Grid,
-  Checkbox,
-  FormControlLabel,
   TextField,
   Button,
   Avatar,
 } from "@mui/material";
-import { NavLink } from "react-router-dom";
 
-const MyLinkRoute = styled(NavLink)(() => ({
-  fontSize: "1rem",
-  textDecoration: "none",
-  color: "#555",
-  "&.active": { color: "#FFF" },
-  "&:hover": {
-    color: "blue",
-  },
-}));
-
-export default function MySignUpCard() {
+export default function MyContactUsCard() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -34,10 +20,10 @@ export default function MySignUpCard() {
   return (
     <>
       <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-        <LockOutlinedIcon />
+        <EmailIcon />
       </Avatar>
       <Typography component="h1" variant="h5">
-        Sign up
+        Contact Us
       </Typography>
       <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
         <Grid container spacing={2}>
@@ -77,32 +63,15 @@ export default function MySignUpCard() {
           </Grid>
           <Grid item xs={12}>
             <TextField
+              multiline
               required
               fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="new-password"
+              name="message"
+              label="message"
+              type="text"
+              id="message"
+              autoComplete="message"
               variant="standard"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              required
-              fullWidth
-              name="password confirmation"
-              label="Password confirmation"
-              type="password"
-              id="password_confirmation"
-              autoComplete="password_confirmation"
-              variant="standard"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <FormControlLabel
-              control={<Checkbox value="allowExtraEmails" color="primary" />}
-              label="I want to receive inspiration, marketing promotions and updates via email."
             />
           </Grid>
         </Grid>
@@ -112,15 +81,8 @@ export default function MySignUpCard() {
           variant="contained"
           sx={{ mt: 3, mb: 2 }}
         >
-          Sign Up
+          Send
         </Button>
-        <Grid container justifyContent="flex-end">
-          <Grid item>
-            <MyLinkRoute to="/sign_in">
-              Don't have an account? Sign Up
-            </MyLinkRoute>
-          </Grid>
-        </Grid>
       </Box>
     </>
   );

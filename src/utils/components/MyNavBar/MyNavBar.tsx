@@ -1,7 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { AppBar, Toolbar, Container, Typography, Grid } from "@mui/material";
+import styled from "@emotion/styled";
 //
-import { MyNavLink } from "src/utils/components/ComLinkes";
+const MyNavLink = styled(NavLink)(() => ({
+  fontSize: "1.5rem",
+  padding: "8px",
+  textDecoration: "none",
+  color: "#BBB",
+  "&.active": { color: "#FFF" },
+  "&:hover": {
+    color: "blue",
+  },
+}));
 
 function ResponsiveAppBar({ urls, logo }) {
   return (

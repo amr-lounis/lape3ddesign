@@ -1,4 +1,4 @@
-import MyCardImage from "./MyCardImage";
+import MyCardImage from "src/utils/components/MyCards/MyCardImage";
 import MySignUpCard from "./MySignUpCard";
 import img from "./image_sign_up.png";
 

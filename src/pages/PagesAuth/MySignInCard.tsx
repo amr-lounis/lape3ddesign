@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import {
   Typography,
@@ -9,8 +10,17 @@ import {
   Button,
   Avatar,
 } from "@mui/material";
+import { NavLink } from "react-router-dom";
 //
-import { MyNavLink } from "src/utils/components/ComLinkes";
+const MyLinkRoute = styled(NavLink)(() => ({
+  fontSize: "1rem",
+  textDecoration: "none",
+  color: "#555",
+  "&.active": { color: "#FFF" },
+  "&:hover": {
+    color: "blue",
+  },
+}));
 
 export default function MySignInCard() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -66,12 +76,12 @@ export default function MySignInCard() {
         </Button>
         <Grid container>
           <Grid item xs>
-            <MyNavLink to="/forgot">"Forgot password?"</MyNavLink>
+            <MyLinkRoute to="/forgot">"Forgot password?"</MyLinkRoute>
           </Grid>
           <Grid item>
-            <MyNavLink to="/sign_up">
+            <MyLinkRoute to="/sign_up">
               "Don't have an account? Sign Up"
-            </MyNavLink>
+            </MyLinkRoute>
           </Grid>
         </Grid>
       </Box>

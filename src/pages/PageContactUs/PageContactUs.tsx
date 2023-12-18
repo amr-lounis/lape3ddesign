@@ -1,9 +1,16 @@
 import { Container } from "@mui/material";
+import MyCardImage from "src/utils/components/MyCards/MyCardImage";
+import MyContactUsCard from "./MyContactUsCard";
+import img from "./image_contact_us.png";
 
 export default function Page() {
   return (
     <div>
-      <Container sx={{ height: "100vh" }}></Container>
+      <Container>
+        <MyCardImage img={img}>
+          <MyContactUsCard></MyContactUsCard>
+        </MyCardImage>
+      </Container>
     </div>
   );
 }
