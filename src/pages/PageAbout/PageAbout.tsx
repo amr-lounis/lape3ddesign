@@ -1,10 +1,12 @@
 import { Container, Button } from "@mui/material";
-import ComAboutAbout from "./ComAbout";
+import ComAbout from "./ComAbout";
 import img from "./image_about.png";
 import { data } from "src/data/data_about";
 import ComAboutCol from "./ComAboutCol";
+import { useNavigate } from "react-router-dom";
 
 export default function PageServices() {
+  const navigate = useNavigate();
   return (
     <div>
       <Container
@@ -16,37 +18,34 @@ export default function PageServices() {
           marginBottom: 20,
         }}
       >
-        <ComAboutAbout
+        <ComAbout
           img={img}
           title={data.AboutText.title}
           descriptions={data.AboutText.descriptions}
-        ></ComAboutAbout>
-        <ComAboutAbout
+        ></ComAbout>
+        <ComAbout
           img={img}
           title={data.AboutServices.title}
           descriptions={data.AboutServices.descriptions}
-        ></ComAboutAbout>
-        <ComAboutAbout
+        ></ComAbout>
+        <ComAbout
           img={img}
           title={data.AboutMarket.title}
           descriptions={data.AboutMarket.descriptions}
-        ></ComAboutAbout>
+        ></ComAbout>
         <ComAboutCol
           title={data.AboutEngage.title}
           descriptions={data.AboutEngage.descriptions}
         ></ComAboutCol>
-
-        {/* <ComAboutEngage></ComAboutEngage> */}
-        <Container
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            p: 10,
-          }}
-        >
-          <Button variant="contained">GET IN TOUCH</Button>
-          <Button variant="contained">BECOME A DESIGNER</Button>
+        <Container>
+          <Button
+            variant="contained"
+            onClick={() => {
+              navigate("/contact_us");
+            }}
+          >
+            Contact Us
+          </Button>
         </Container>
       </Container>
     </div>

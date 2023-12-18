@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 //
-export default function ComAboutAbout({ title, descriptions, img }) {
+export default function ComAbout({ title, descriptions, img }) {
   return (
     <Grid
       container
