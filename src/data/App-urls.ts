@@ -1,10 +1,10 @@
 import { PageHome } from "src/pages/PageHome";
 import { PageNotFond } from "src/pages/PageNotFond";
-import { PageSignIn, PageSignUp } from "../pages/PagesAuth";
-import { PageContactUs } from "../pages/PageContactUs";
-import { PageServices } from "../pages/PageServices";
-import { PageMarket } from "../pages/PageMarket";
-import { PageAbout } from "../pages/PageAbout";
+import { PageSignIn, PageSignUp } from "src/pages/PagesAuth";
+import { PageContactUs } from "src/pages/PageContactUs";
+import { PageServices } from "src/pages/PageServices";
+import { PageMarket } from "src/pages/PageMarket";
+import { PageAbout } from "src/pages/PageAbout";
 
 export const urls = {
   thisWebSite: "lep",
@@ -15,9 +15,6 @@ export const urls = {
     { name: "about", to: "/about" },
     { name: "SignIn", to: "/sign_in" },
   ],
-  images: {
-    logo: "/images/logo.png",
-  },
   app_routes: [
     { to: "/", element: PageHome },
     { to: "/sign_in", element: PageSignIn },

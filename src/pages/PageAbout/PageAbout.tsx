@@ -1,8 +1,8 @@
 import { Container, Button } from "@mui/material";
-import ComAboutPremier from "./ComAboutPremier";
-import ComAboutServices from "./ComAboutServices";
-import ComAboutEngage from "./ComAboutEngage";
-import ComAboutMarket from "./ComAboutMarket";
+import ComAboutAbout from "./ComAbout";
+import img from "./image_about.png";
+import { data } from "src/data/data_about";
+import ComAboutCol from "./ComAboutCol";
 
 export default function PageServices() {
   return (
@@ -16,10 +16,27 @@ export default function PageServices() {
           marginBottom: 20,
         }}
       >
-        <ComAboutPremier></ComAboutPremier>
-        <ComAboutServices></ComAboutServices>
-        <ComAboutMarket></ComAboutMarket>
-        <ComAboutEngage></ComAboutEngage>
+        <ComAboutAbout
+          img={img}
+          title={data.AboutText.title}
+          descriptions={data.AboutText.descriptions}
+        ></ComAboutAbout>
+        <ComAboutAbout
+          img={img}
+          title={data.AboutServices.title}
+          descriptions={data.AboutServices.descriptions}
+        ></ComAboutAbout>
+        <ComAboutAbout
+          img={img}
+          title={data.AboutMarket.title}
+          descriptions={data.AboutMarket.descriptions}
+        ></ComAboutAbout>
+        <ComAboutCol
+          title={data.AboutEngage.title}
+          descriptions={data.AboutEngage.descriptions}
+        ></ComAboutCol>
+
+        {/* <ComAboutEngage></ComAboutEngage> */}
         <Container
           sx={{
             display: "flex",
