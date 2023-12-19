@@ -7,7 +7,7 @@ import { PageMarket } from "src/pages/PageMarket";
 import { PageAbout } from "src/pages/PageAbout";
 
 export const urls = {
-  baseUrl: "/lape3ddesign/",
+  baseUrl: "/",
   thisWebSite: "lape3ddesign",
   nav_urls: [
     { name: "home", to: "/" },
@@ -16,14 +16,14 @@ export const urls = {
     { name: "about", to: "/about" },
   ],
   app_routes: [
-    { to: "/lape3ddesign/", element: PageHome },
-    { to: "/lape3ddesign/sign_in", element: PageSignIn },
-    { to: "/lape3ddesign/sign_up", element: PageSignUp },
-    { to: "/lape3ddesign/contact_us", element: PageContactUs },
-    { to: "/lape3ddesign/services", element: PageServices },
-    { to: "/lape3ddesign/market", element: PageMarket },
-    { to: "/lape3ddesign/about", element: PageAbout },
-    { to: "/lape3ddesign/*", element: PageNotFond },
+    { to: "/", element: PageHome },
+    { to: "/sign_in", element: PageSignIn },
+    { to: "/sign_up", element: PageSignUp },
+    { to: "/contact_us", element: PageContactUs },
+    { to: "/services", element: PageServices },
+    { to: "/market", element: PageMarket },
+    { to: "/about", element: PageAbout },
+    { to: "/*", element: PageNotFond },
   ],
   footers: [
     {
