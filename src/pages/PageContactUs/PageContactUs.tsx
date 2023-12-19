@@ -6,7 +6,7 @@ import img from "./image_contact_us.png";
 export default function Page() {
   return (
     <div>
-      <Container>
+      <Container style={{ minHeight: "100vh" }}>
         <MyCardImage img={img}>
           <MyContactUsCard></MyContactUsCard>
         </MyCardImage>

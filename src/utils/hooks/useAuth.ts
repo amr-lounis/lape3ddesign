@@ -69,7 +69,7 @@ export const MyCurrentUser = () => {
   console.log("uid : ", auth.currentUser.uid);
 };
 
-export const MySignUp = (username, email, password) => {
+export const MySignUp = (username: string, email: string, password: string) => {
   console.log("Username:", username);
   console.log("Email:", email);
   console.log("Password:", password);

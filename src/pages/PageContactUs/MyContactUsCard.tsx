@@ -64,6 +64,7 @@ export default function MyContactUsCard() {
           <Grid item xs={12}>
             <TextField
               multiline
+              rows={4}
               required
               fullWidth
               name="message"

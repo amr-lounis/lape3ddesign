@@ -11,6 +11,7 @@ import {
   Avatar,
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { MySignUp } from "src/utils/hooks/useAuth";
 
 const MyLinkRoute = styled(NavLink)(() => ({
   fontSize: "1rem",
@@ -26,10 +27,10 @@ export default function MySignUpCard() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const email = data.get("email").toString();
+    const password = data.get("password").toString();
+    console.log(data);
+    // MySignUp("", email, password);
   };
   return (
     <>

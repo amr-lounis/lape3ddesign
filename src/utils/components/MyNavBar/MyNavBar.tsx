@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { AppBar, Toolbar, Container, Typography, Grid } from "@mui/material";
 import styled from "@emotion/styled";
+import MyProfileMenu from "./MyProfileMenu";
 //
 const MyNavLink = styled(NavLink)(() => ({
   fontSize: "1.5rem",
@@ -24,28 +25,25 @@ function ResponsiveAppBar({ urls, logo }) {
       }}
     >
       <Container>
-        <Toolbar disableGutters>
-          <Grid container>
+        <nav>
+          <Toolbar disableGutters>
             <Grid
-              item
-              md={8}
-              sx={{
+              container
+              style={{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                justifyContent: "space-between",
               }}
             >
-              <Typography
-                variant="h6"
-                color="inherit"
-                noWrap
-                sx={{ flexGrow: 1 }}
-              >
-                <NavLink to="/" className="nav-link">
-                  <img src={logo} height={50} alt="logo"></img>
-                </NavLink>
-              </Typography>
-              <nav>
+              <Grid item>
+                <Typography>
+                  <NavLink to="/" className="nav-link">
+                    <img src={logo} height={50} alt="logo"></img>
+                  </NavLink>
+                </Typography>
+              </Grid>
+              <Grid item>
                 {urls.nav_urls.map((r) => {
                   return (
                     <MyNavLink key={r.name} to={r.to}>
@@ -53,10 +51,13 @@ function ResponsiveAppBar({ urls, logo }) {
                     </MyNavLink>
                   );
                 })}
-              </nav>
+              </Grid>
+              <Grid item>
+                <MyProfileMenu></MyProfileMenu>
+              </Grid>
             </Grid>
-          </Grid>
-        </Toolbar>
+          </Toolbar>
+        </nav>
       </Container>
     </AppBar>
   );
