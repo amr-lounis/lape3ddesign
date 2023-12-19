@@ -1,11 +1,10 @@
 import { Container, Grid } from "@mui/material";
-import { urls } from "src/data/App-urls";
 import MyCard1 from "src/utils/components/MyCards/MyCard1";
 
 export default function Page() {
   const listStore = [];
   for (let i = 1; i < 14; i++) {
-    listStore.push(`${urls.baseUrl}img_store/${i}.png`);
+    listStore.push(`/img_store/${i}.png`);
   }
   return (
     <div>

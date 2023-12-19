@@ -7,7 +7,6 @@ import { PageMarket } from "src/pages/PageMarket";
 import { PageAbout } from "src/pages/PageAbout";
 
 export const urls = {
-  baseUrl: "/",
   thisWebSite: "lape3ddesign",
   nav_urls: [
     { name: "home", to: "/" },

@@ -6,7 +6,6 @@ import { useState } from "react";
 import { MySignOut, useAuth } from "src/utils/hooks/useAuth";
 import LoginIcon from "@mui/icons-material/Login";
 import { useNavigate } from "react-router-dom";
-import { urls } from "src/data/App-urls";
 
 export default function MyProfileMenu() {
   const navigate = useNavigate();
@@ -34,7 +33,7 @@ export default function MyProfileMenu() {
               height: 40,
               width: 40,
             }}
-            src={`${urls.baseUrl}img_avatar/m/1.png`}
+            src={`/img_avatar/m/1.png`}
           />
         </Button>
       ) : (
