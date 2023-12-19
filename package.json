@@ -35,7 +35,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "firebase deploy",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -60,7 +60,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0",
     "typescript": "^5.3.2"
   }
 }
