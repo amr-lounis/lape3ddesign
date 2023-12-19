@@ -7,15 +7,13 @@ import Typography from "@mui/material/Typography";
 export default function MyCard1({ img }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      {/* <CardMedia sx={{ height: 100 }} image={img} title="green iguana" /> */}
       <img src={img} height="100%" alt=""></img>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Test
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         </Typography>
       </CardContent>
       <CardActions>
